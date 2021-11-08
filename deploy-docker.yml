@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Start the container
+      docker_container:
+        name: python-app
+        image: itamarc/python-app:{{DOCKER_TAG}}
+        state: started
+        volumes:
+          - /var/lib/jenkins/workspace/test-python/data:/WORK_REPO/data
