@@ -8,4 +8,4 @@
         image: itamarc/python-app:{{DOCKER_TAG}}
         state: started
         volumes:
-          - /var/lib/jenkins/workspace/test-python/data:/WORK_REPO/data
+          - /home/cloud_user/Documents/data:/WORK_REPO/data
