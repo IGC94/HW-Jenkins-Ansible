@@ -14,7 +14,7 @@ pipeline {
     
     stage("Docker Deploy with Ansible") {
         steps {
-            ansiblePlaybook extras: '-e DOCKER_TAG="${BUILD_NUMBER}"', installation: 'ansible', playbook: 'docker-deploy.yml'
+            ansiblePlaybook extras: '-e DOCKER_TAG="${BUILD_NUMBER}"', installation: 'ansible', playbook: 'deploy-docker.yml'
         }
     }
     
