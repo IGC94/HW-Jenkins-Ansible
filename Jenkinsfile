@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage("Building/Dockerizing Image") {
       steps{
-          sh "docker build -t . ${env.image_name}:$BUILD_NUMBER"
+          sh "docker build . -t ${env.image_name}:$BUILD_NUMBER"
       }
     }
     
